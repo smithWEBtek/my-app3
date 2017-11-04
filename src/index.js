@@ -5,6 +5,7 @@ import App from './App';
 // import registerServiceWorker from './registerServiceWorker';
 // how to use the variable objects from another file, in this file ??
 import users from './Arrays';
+import pets from './Arrays';
 
 
 
@@ -82,6 +83,14 @@ function heyPeople(obj){
   return userGreetings 
 }
 
+function heyArray(arr){
+  let arrElements = []
+  for(let element in arr){
+    arrElements.push('firstName: ' + element)
+  }
+  return arrElements 
+}
+
 
 
 ReactDOM.render(<App />, document.getElementById('root'));
@@ -93,4 +102,4 @@ ReactDOM.render(myFruits(), MOUNT3);
 ReactDOM.render(<MyFruitList />, MOUNT4);
 ReactDOM.render(nestedButtons, MOUNT5);
 ReactDOM.render(HeyBrad, MOUNT6);
-ReactDOM.render(heyPeople(users), MOUNT7);
+ReactDOM.render(heyArray(users1), MOUNT7);
