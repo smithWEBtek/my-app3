@@ -3,12 +3,18 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 // import registerServiceWorker from './registerServiceWorker';
+// how to use the variable objects from another file, in this file ??
+import users from './Arrays';
+
+
 
 const MOUNT1 = document.querySelector('#section1')
 const MOUNT2 = document.querySelector('#section2')
 const MOUNT3 = document.querySelector('#section3')
 const MOUNT4 = document.querySelector('#section4')
 const MOUNT5 = document.querySelector('#section5')
+const MOUNT6 = document.querySelector('#section6')
+const MOUNT7 = document.querySelector('#section7')
 
 const fruits = ["mango", "apple", "grape", "bananna", "plum", "durian"]
 
@@ -53,7 +59,30 @@ class MyFruitList extends React.Component {
   }
 }
 
-const MyStuff = React.createElement('div', {}, Button, ShoppingList)
+class Greeting extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name}</h1>;
+  }
+}
+
+function greeting2(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+
+const HeyBrad = greeting2({name: "Brad"})
+
+
+const users1 = ['nick', 'nate', 'kate', 'shin', 'boyo']
+
+function heyPeople(obj){
+  let userGreetings = []
+  for(const user of obj){
+    userGreetings.push(user.firstName)
+  }
+  return userGreetings 
+}
+
+
 
 ReactDOM.render(<App />, document.getElementById('root'));
 // registerServiceWorker();
@@ -63,3 +92,5 @@ ReactDOM.render(<ShoppingList />, MOUNT2);
 ReactDOM.render(myFruits(), MOUNT3);
 ReactDOM.render(<MyFruitList />, MOUNT4);
 ReactDOM.render(nestedButtons, MOUNT5);
+ReactDOM.render(HeyBrad, MOUNT6);
+ReactDOM.render(heyPeople(users), MOUNT7);
