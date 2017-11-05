@@ -4,11 +4,8 @@ import './index.css';
 import App from './App';
 // import registerServiceWorker from './registerServiceWorker';
 // how to use the variable objects from another file, in this file ??
-import users from './Arrays';
-import pets from './Arrays';
-
-
-
+import {evens, odds, users, pets, fruits} from './Arrays';
+ 
 const MOUNT1 = document.querySelector('#section1')
 const MOUNT2 = document.querySelector('#section2')
 const MOUNT3 = document.querySelector('#section3')
@@ -16,8 +13,6 @@ const MOUNT4 = document.querySelector('#section4')
 const MOUNT5 = document.querySelector('#section5')
 const MOUNT6 = document.querySelector('#section6')
 const MOUNT7 = document.querySelector('#section7')
-
-const fruits = ["mango", "apple", "grape", "bananna", "plum", "durian"]
 
 class Button extends React.Component {
   render() {
@@ -71,10 +66,7 @@ function greeting2(props) {
 }
 
 const HeyBrad = greeting2({name: "Brad"})
-
-
-const users1 = ['nick', 'nate', 'kate', 'shin', 'boyo']
-
+ 
 function heyPeople(obj){
   let userGreetings = []
   for(const user of obj){
@@ -91,8 +83,6 @@ function heyArray(arr){
   return arrElements 
 }
 
-
-
 ReactDOM.render(<App />, document.getElementById('root'));
 // registerServiceWorker();
 
@@ -102,4 +92,4 @@ ReactDOM.render(myFruits(), MOUNT3);
 ReactDOM.render(<MyFruitList />, MOUNT4);
 ReactDOM.render(nestedButtons, MOUNT5);
 ReactDOM.render(HeyBrad, MOUNT6);
-ReactDOM.render(heyArray(users1), MOUNT7);
+ReactDOM.render(heyArray(users), MOUNT7);
