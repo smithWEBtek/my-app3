@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 // import registerServiceWorker from './registerServiceWorker';
 // how to use the variable objects from another file, in this file ??
-import {evens, odds, users, pets, fruits} from './Arrays';
+import {evens, odds, users, pets, fruits, heroes} from './Arrays';
  
 const MOUNT1 = document.querySelector('#section1')
 const MOUNT2 = document.querySelector('#section2')

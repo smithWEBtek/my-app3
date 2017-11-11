@@ -126,3 +126,9 @@ export const owners = {
     state: "OH"
   }
 }
+
+export const heroes = [
+  { firstName: 'Tony', lastName: 'Stark', heroName: 'Iron Man' },
+  { firstName: 'Steve', lastName: 'Rogers', heroName: 'Captain America' },
+  { firstName: 'Barry', lastName: 'Allen', heroName: 'The Flash' },
+];
